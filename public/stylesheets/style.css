@@ -1,0 +1,35 @@
+
+a {
+  	color: #00B7FF;
+  }
+
+* {
+ 	 margin: 0;
+ 	 padding: 0; 
+ 	 box-sizing: border-box;
+  }
+ body
+ {
+ 	font: 13px Helvetica, Arial;
+ 	background: #eee
+ }
+ ul#messages 
+ { 
+ 	list-style-type: none; 
+ 	margin: 0; 
+ 	padding: 0; 
+ }
+ #messages li 
+ { 
+ 	padding: 5px 10px; 
+ }
+ /*#messages li:nth-child(odd) 
+ { 
+ 	background: #eee; 
+ }*/
+ span.help-block
+ {
+ 	padding-left:2px;
+ 	color:red;
+ 	
+ }

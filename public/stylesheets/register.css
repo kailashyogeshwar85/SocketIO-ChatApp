@@ -1,0 +1,42 @@
+body{
+	/*background: #8e44ad;*/
+	font-family: open_sanslight;
+	color:#fff;
+}
+#register.container
+{
+	width:500px;
+	background: #8e44ad;
+	margin-top:50px;
+	border-radius:2px;
+	border-right:1px solid #d5d5d5;
+	box-shadow:-2px 2px 3px rgba(0,0,0,0.53);
+}
+/*h1
+{
+	color:#9b59b6;
+	font-family: open_sansextrabold;
+}*/
+#register .row
+{
+	margin:0 0 14px;
+}
+#register .main-container
+{
+	padding:10px;
+}
+#register .row button
+{
+	width:49%;
+	background: #e67e22;
+	color:white;
+	border:0;
+}
+#register .row>button:first-child
+{
+	margin-right:2%;
+}
+#register .row:last-child
+{
+	padding-top:6px;
+}

@@ -1,0 +1,38 @@
+div.users-panel
+{
+  float: right;
+  width: 20%;
+  height: 95%;
+  position: fixed;
+  right: 10px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.3);	
+}
+.userslist-wrap{
+	overflow:hidden;
+  padding:8px;
+  border-bottom: solid 1px #ccc;
+}
+.userslist-wrap .live-username{
+	float:left;
+  padding:4px;
+	width:80%;
+}
+#users-list .list-group-item
+{
+  background: none;
+  border:none;
+  line-height: 1.8;
+  cursor:pointer;
+  padding:0;
+}
+.userslist-wrap .icon-wrap
+{
+  width:30px;
+  margin-right:8px;
+}
+.icon-wrap img
+{
+  max-width: 24px;
+}

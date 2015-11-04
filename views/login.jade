@@ -1,0 +1,32 @@
+extends layout
+block styles
+	link(rel='stylesheet' href='/stylesheets/login.css')
+block content
+		.container#login(ng-controller='loginCtrl')
+			form(action='/logincheck' name='loginForm' method='post' ng-submit='submitForm(loginForm.$valid)' novalidate)
+				h3 Login
+				.row
+					.input-fields
+						input#email.form-control(name="email" type='email' ,placeholder='Email Id',ng-model='user.email' required)
+						span.help-block(ng-show='loginForm.email.$invalid && !loginForm.email.$pristine') Invalid emailId	
+					.fields
+						label(for='username') Email
+				.row
+					.input-fields
+						input#password.form-control(name="password" type='password',placeholder='Password',ng-model='user.password',ng-minlength='7',ng-maxlength='15')
+						span.help-block(ng-show='loginForm.password.$error.minlength') Password too short
+						span.help-block(ng-show='loginForm.password.$error.maxlength') Password too long	
+					.fields
+						label(for='password') Password
+				.row
+					.input-fields#actions
+						button.btn.btn-default(id='b1' type='submit' role='button',ng-disabled='loginForm.$invalid') Login														
+		p.register
+			span Not a member yet ?
+				a(href='/register') Register
+			p.error(style="color:white")=session.count					
+block scripts
+		each scr in url.cdnscripts
+			script(src=scr type='text/javascript')		
+		script(src='/javascripts/controllers/loginController.js',type='text/javascript')					
+		script(src="/javascripts/services/builtconfig.js",type='text/javascript')

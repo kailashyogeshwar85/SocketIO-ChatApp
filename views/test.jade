@@ -1,0 +1,32 @@
+extends layout
+block styles
+	link(rel='stylesheet',href='/emoji/css/basic/emojify.css')
+	link(rel='stylesheet', href='/stylesheets/chat.css')
+	link(rel='stylesheet',href='/stylesheets/users-widget.css')
+	link(rel='stylesheet',href='/stylesheets/jabber-box.css')
+	body#twiddle
+		include header
+		block content
+		.col-md-9.wrap
+			.chat-box#c1
+				.msg-container
+					ul#messages
+			.jabber-box
+				.comment-box
+					.avatar
+						img(src='/images/av1.png')
+					.tweet-box.input-group
+						form(action='' id='tweetFrm')
+							input.form-control(id='tweet-input' placeholder='write message')
+							span.input-group-addon.btn-primary#tweet Tweet
+		.users-panel				
+			ul#users-list.list-group
+				li.list-group-item
+						.userslist-wrap
+							.icon-wrap.avatar
+								img(src='/images/av1.png' lat='avatar')
+							.live-username
+								span kailash yogeshwar
+block scripts
+		each scr in url.cdnscripts
+			script(src=scr,type='text/javascript')		

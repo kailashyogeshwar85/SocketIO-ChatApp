@@ -1,0 +1,23 @@
+extends layout
+block styles
+	link(rel='stylesheet' href='/stylesheets/register.css')
+block content
+	div#register.container
+		h3 Register
+		.main-container
+			form(action='')
+				.row
+					.input-fields
+						input#username.form-control(type='text',placeholder='Username')
+				.row
+					.input-fields
+						input#email.form-control(type='email',placeholder='Email')
+				.row
+					.input-fields
+						input#password.form-control(type='password',placeholder='Password')
+				.row
+					.input-fields
+						input#confirmpass.form-control(type='password',placeholder='Re-ente password')
+				.row
+					button.btn.btn-default(type='submit' role='submit') Register
+					button.btn.btn-default(type='button' role='button') Reset							

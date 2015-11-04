@@ -1,0 +1,63 @@
+body
+{
+	background: #4183D7;
+	font-family: open_sanslight;
+}
+#login h3
+{
+	margin-top:10px;
+	font-family: open_sanssemibold;
+
+}
+#login.container
+{
+	width:380px;
+	background: #fff;
+	margin:100px auto 0;
+	border:solid 1px #d5d5d5;
+	padding:10px;
+	border-radius: 4px;
+	box-shadow:-2px 4px 2px rgba(0,0,0,0.3);
+
+}
+#login .row
+{
+	margin:0;
+	margin-bottom:10px;
+
+}
+.row .fields
+{
+	margin-top:5px;
+	padding-left:4px;
+}
+#login button
+{
+	width:100%;
+	color:#fff;
+	background:#9b59b6;
+	margin-right:10px;
+}
+#actions.input-fields
+{
+	margin-top:6px;
+}
+p.register
+{
+	text-align:center;
+	margin:10px auto 0;
+	color:#fff;
+}
+p.register>span>a
+{
+	margin-left:4px;
+	text-decoration: none;
+	color:#f1c40f;
+	font-family:open_sanssemibold;
+}
+/*====================gif loader style=================*/
+button#b1[type='submit']>i
+{
+	float:right;
+	margin-top:4px;
+}

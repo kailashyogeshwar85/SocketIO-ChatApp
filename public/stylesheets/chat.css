@@ -1,0 +1,238 @@
+div.wrap
+{
+	margin-left:24px;
+}
+div#header {
+  background: #6f5499;
+  color: #cdbfe3;
+}
+div#header a
+{
+	color: #cdbfe3;
+}
+
+div.chat-box{
+	background: #fff;
+	padding:12px;
+	height:500px;
+	overflow-y:auto;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+}
+/*users panel*/
+
+
+/*ul messages inner elements*/
+div.msg-wrap
+{
+	overflow:hidden;
+	margin-bottom: 10px;
+}
+div.avatar
+{
+	float:left;
+	width:60px;
+}
+.avatar img
+{
+	max-width:50px;
+}
+div.msg-content
+{
+	float:left;
+	margin-left: 4px;
+	width:950px;
+	padding-right:10px;
+	word-wrap:break-word;
+
+}
+div.msg-content p
+{
+	margin-bottom: 4px;
+	
+}
+span.post-time
+{
+	margin-left:8px;
+}
+
+.welcome
+{
+	position:absolute;
+	z-index:3221;
+	top:70px;
+	-webkit-transition: top .5s cubic-bezier(.58,0,2,.28);
+}
+
+/*//================================chat box feature*/
+div.chat-popup
+{
+	transition:all 1s cubic-bezier(.5,.45,.79,.88);
+	z-index:3000;
+}
+.personal-chat
+{
+	position: fixed;
+	padding:4px;
+}
+.personal-chat .chat-head
+{
+	padding:6px;
+	background: #85DB18;
+	color:white;
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	overflow: hidden;
+}
+.chat-head.blink
+{
+	border:none 
+	animation:blink_title 3s;
+	animation-iteration-count:infinite;
+	-webkit-animation:blink_title 3s;
+	-webkit-animation-iteration-count:infinite;
+
+}
+.personal-chat .chat-title
+{
+	float:left;
+}
+ .chat-options
+ {
+ 	float:right;
+ }
+ .chat-options a
+ {
+ 	text-decoration: none;
+ 	color:white;
+ 	margin-right: 4px;
+ }
+.personal-chat .chat-content
+{
+	height:160px;
+	background: white;
+	overflow:auto;
+	-webkit-transition: all cubic-bezier(.58,0,2,.28);
+	-o-transition: all cubic-bezier(.58,0,2,.28);
+	transition: all cubic-bezier(.58,0,2,.28);
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-bottom: solid 1px #eee;
+}
+.personal-chat .chat-input
+{
+	padding:5px;
+	background: #fff;
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-bottom: solid 1px #eee;
+}
+.chat-input textarea
+{
+	width:206px;
+	outline:none;
+	transition:border 1s;
+	padding:3px 0 3px 3px;
+	border:solid 1px #eee;
+	background: #fff;
+}
+.chat-input textarea:focus
+{
+	border-color:rgb(65,231,93);
+}
+.chat-content .message-post .sender-name
+{
+
+	margin:4px 0;
+	text-align:center;
+	color:black;
+	font-size:10px;
+}
+
+.clearfix{
+	clear:both;
+}
+/*===================speech bubble styling=====================*/
+.speech-bubble{
+	background:#1abc9c;
+	color: #fff;
+	width:140px;
+	border:solid 1px #c8c8c8;
+	border-radius: 5px;
+	padding: 8px;
+	position: absolute;
+	margin:2px 14px;
+}
+.speech-bubble .arrow{
+	border-style:solid;
+	position: absolute;
+}
+.bottom{
+	border-color: #c8c8c8 transparent transparent transparent;
+	border-width:8px 8px 0 8px;
+	bottom:-8px;
+}
+.bottom:after {
+    border-color: #1abc9c transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px 7px 0px 7px;
+    bottom: 1px;
+    content: "";
+    position: absolute;
+    left: -7px;
+}
+.up
+{
+	border-color:transparent transparent #c8c8c8 transparent;
+	border-width:0 8px 8px 8px;
+	top:-8px;
+	right:7px;
+
+}
+/*//adding another arrow over existing arrow*/
+.up:after{
+	  border-color: transparent transparent #1abc9c transparent;
+	  border-style: solid;
+	  border-width: 0 7px 7px 7px;
+	  right: -7px;
+	  top: 1px;
+	  content: "";
+	  position: absolute;
+}
+.message-post{
+	position: relative;
+	height:60px;
+}
+.message-post.right{
+	margin-left: 40px;
+}
+
+.chat-content::-webkit-scrollbar{
+	width:6px;
+	height:7px;
+	background: transparent;
+	border-radius:4px;
+}
+.chat-content::-webkit-scrollbar-button{
+	display:none;
+}
+
+.chat-content::-webkit-scrollbar-thumb{
+	background-image:-webkit-linear-gradient(top,#4d90fe,#4787ed);
+	border-radius: 6px;
+}
+.chat-content::-webkit-scrollbar-thumb:hover{
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.3);
+}
+.chat-content::-webkit-scrollbar-track{
+	box-shadow:none;
+	background:transparent;
+}
+@-webkit-keyframes blink_title
+{
+	from{
+		background: #85DB18;
+	}
+	to{
+		background:#046380;
+	}
+}
